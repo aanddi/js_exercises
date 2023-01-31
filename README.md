@@ -1,6 +1,12 @@
 <p align="center"> 
 <img src="https://cdn.icon-icons.com/icons2/1451/PNG/512/jsfolder_99356.png" alt="css"  height= "150px"> 
-<h1 align="center">Практические упражнения JavaScript</h1> 
+
+<h1 align="center">
+
+[Практические упражнения JavaScript](https://code.mu/ru/javascript/book/prime/)
+  
+</h1>
+
 </p> 
 
 ### Темы: 
