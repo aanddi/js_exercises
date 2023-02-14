@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Вычисляемые свойства в JavaScript</title>
+
+   <script>
+
+      /*______________№1______________*/
+      let key = 'x';
+
+      let obj1 = {
+         [key]: 1,
+         y: 2,
+         z: 3
+      };
+
+      console.log(obj1[key]);
+
+      console.log("\n")
+
+      /*______________№2______________*/
+      let key1 = 'x';
+      let key2 = 'y';
+      let key3 = 'z';
+
+      let obj2 = {
+         [key1]: 1,
+         [key2]: 2,
+         [key3]: 3
+      };
+
+      console.log(obj2[key1]);
+      console.log(obj2[key2]);
+      console.log(obj2[key3]);
+
+   </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
