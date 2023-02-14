@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Константы с массивами или объектами в JavaScript</title>
+
+   <script>
+
+      /*______________№1______________*/
+      const arr1 = ['a', 'b', 'c'];
+      arr1[1] = '!';
+
+      console.log(arr1); // [a, !, c]
+
+      /*______________№2______________*/
+      const arr2 = ['a', 'b', 'c'];
+      arr2 = [1, 2, 3];
+
+      console.log(arr2); // error
+
+      /*______________№3______________*/
+      const arr3 = ['a', 'b', 'c'];
+      arr3 = ['a', 'b', 'c'];
+
+      console.log(arr3); // error
+
+
+   </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
