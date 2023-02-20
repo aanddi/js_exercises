@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Группировка условий в JavaScript</title>
+</head>
+
+<script>
+
+   /*______________№1______________*/
+   let num = 3;
+
+   if ((num > 5) && (num < 10 || num == 20)) {
+      console.log('+++');
+   } else {
+      console.log('---'); // сработает это
+   }
+
+   /*______________№2______________*/
+   let num1 = 3;
+
+   if ((num1 > 5 || num1 > 0) && (num1 < 3)) {
+      console.log('+++');
+   } else {
+      console.log('---'); // сработает это
+   }
+
+   /*______________№3______________*/
+   let num2 = 3;
+
+   if ((num2 == 9 || num2 > 10) && (num2 < 20 || num2 > 20) && (num2 < 30)) {
+      console.log('+++');
+   } else {
+      console.log('---'); // сработает это
+   }
+</script>
+
+<body>
+
+</body>
+
+</html>
