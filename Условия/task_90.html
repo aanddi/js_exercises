@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Общая сокращенная форма проверки в JavaScript</title>
+</head>
+
+<script>
+
+   /*______________№1______________*/
+   let test1 = 3;
+
+   if (test1) {
+      console.log('+++'); // сработает это
+   } else {
+      console.log('---');
+   }
+
+   /*______________№2______________*/
+   let test2 = 'abc';
+
+   if (test2) {
+      console.log('+++'); // сработает это
+   } else {
+      console.log('---');
+   }
+
+   /*______________№3______________*/
+   let test3 = '';
+
+   if (test3) {
+      console.log('+++');
+   } else {
+      console.log('---'); // сработает это
+   }
+
+   /*______________№4______________*/
+   let test4 = 3 * 'abc';
+
+   if (test4) {
+      console.log('+++');
+   } else {
+      console.log('---'); // сработает это
+   }
+
+   /*______________№5______________*/
+   let test5 = null;
+
+   if (test5) {
+      console.log('+++');
+   } else {
+      console.log('---'); // сработает это
+   }
+
+   /*______________№6______________*/
+   let test6 = false;
+
+   if (test6) {
+      console.log('+++');
+   } else {
+      console.log('---'); // сработает это
+   }
+
+   /*______________№7______________*/
+   let test7;
+
+   if (test7) {
+      console.log('+++');
+   } else {
+      console.log('---'); // сработает это
+   }
+
+   /*______________№8______________*/
+   let test8 = 0;
+
+   if (test8) {
+      console.log('+++');
+   } else {
+      console.log('---'); // сработает это
+   }
+
+   /*______________№9______________*/
+   let test9 = '0';
+
+   if (test9) {
+      console.log('+++');  // сработает это
+   } else {
+      console.log('---');
+   }
+
+   /*______________№10______________*/
+   let test10 = -1;
+
+   if (test10) {
+      console.log('+++'); // сработает это
+   } else {
+      console.log('---');
+   }
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>
