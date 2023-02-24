@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Сложные условия в сокращенной форме в JavaScript</title>
+</head>
+
+<script>
+
+   /*______________№1______________*/
+   let test1 = true;
+   let test2 = true;
+
+   if (test1 && test2) {
+      console.log('+++'); // сработает это
+   } else {
+      console.log('---');
+   }
+
+   /*______________№2______________*/
+   let test3 = true;
+   let test4 = true;
+
+   if (test1 && (!test4)) {
+      console.log('+++');
+   } else {
+      console.log('---'); // сработает это
+   }
+
+   /*______________№3______________*/
+   let test5 = true;
+   let test6 = true;
+
+   if ((!test5) && (!test6)) {
+      console.log('+++');
+   } else {
+      console.log('---'); // сработает это
+   }
+
+   /*______________№4______________*/
+   let test7 = true;
+   let test8 = true;
+
+   if ((!test7) && test8) {
+      console.log('+++');
+   } else {
+      console.log('---'); // сработает это
+   }
+
+   /*______________№5______________*/
+   let test9 = true;
+   let test10 = true;
+   let test11 = true;
+
+   if (test9 && test10 && test11) {
+      console.log('+++'); // сработает это
+   } else {
+      console.log('---');
+   }
+
+   /*______________№6______________*/
+   let test12 = true;
+   let test13 = true;
+   let test14 = true;
+
+   if (test12 || test13 && test13) {
+      console.log('+++'); // сработает это
+   } else {
+      console.log('---');
+   }
+
+   /*______________№7______________*/
+   let test15 = true;
+   let test16 = true;
+   let test17 = true;
+
+   if (test15 || (!test16) && (!test17)) {
+      console.log('+++'); // сработает это
+   } else {
+      console.log('---'); 
+   }
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>
