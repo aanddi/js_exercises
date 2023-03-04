@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Формирование строк через циклы в JavaScript</title>
+</head>
+
+<script>
+
+   /*______________№1______________*/
+   let str1 = '';
+
+   for (let i = 0; i <= 5; i++) {
+      str1 += '-'
+   };
+
+   console.log(str1)
+
+
+   /*______________№2______________*/
+   let str2 = '';
+
+   for (let i = 1; i <= 9; i++) {
+      str2 += String(i)
+   };
+
+   console.log(str2)
+
+   /*______________№3______________*/
+   let str3 = '';
+
+   for (let i = 9; i >= 1; i--) {
+      str3 += String(i)
+   };
+
+   console.log(str3)
+
+   /*______________№4______________*/
+   let str4 = '-';
+
+   for (let i = 1; i <= 9; i++) {
+      str4 +=  String(i) + '-' 
+   };
+
+   console.log(str4)
+
+</script>
+
+<body>
+</body>
+
+</html>
