@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Накопление чисел в циклах JavaScript</title>
+</head>
+
+<script>
+   /*______________№1______________*/
+   let res = 0;
+
+   for (let i = 2; i <= 100; i++)
+      if (i % 2 == 0) {
+         res = res + i
+      } else {
+         continue;
+      }
+
+   console.log(res + '\n')
+
+   /*______________№2______________*/
+   let res1 = 0;
+
+   for (let i = 1; i <= 99; i++)
+      if (i % 2 != 0) {
+         res1 = res1 + i
+      } else {
+         continue;
+      }
+
+   console.log(res1 + '\n')
+
+   /*______________№3______________*/
+   let res2 = 1;
+
+   for (let i = 1; i <= 20; i++) {
+      res2 = res2 * i
+   }
+
+   console.log(res2 + '\n')
+
+</script>
+
+<body>
+
+</body>
+
+</html>
