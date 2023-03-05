@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Вложенные циклы и область видимости в JavaScript</title>
+</head>
+
+<script>
+
+//========================================================================
+   for (let i = 0; i <= 9; i++) {
+      let num = 3;
+
+      for (let j = 0; j <= 9; j++) {
+         console.log(num); // выведет 3
+      }
+   }
+
+//========================================================================
+
+   for (let i = 0; i <= 9; i++) {
+      let num = 3;
+
+      for (let j = 0; j <= 9; j++) {
+
+      }
+   }
+   console.log(num); // выдаст ошибку
+
+//========================================================================
+
+   for (let i = 0; i <= 9; i++) {
+      for (let j = 0; j <= 9; j++) {
+         let num = 3;
+      }
+
+      console.log(num); // выдаст ошибку
+   }
+
+   console.log(num); // выдаст ошибку
+
+//========================================================================
+
+</script>
+
+<body>
+</body>
+
+</html>
