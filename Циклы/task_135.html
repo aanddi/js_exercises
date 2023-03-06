@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Советы по отладке кода на примере циклов в JavaScript</title>
+
+   <script>
+
+      console.log('====================== 1 ========================')
+
+      let obj = { a: 10, b: 20, c: 30, d: 40, e: 50 };
+      let sum = 0;
+
+      for (let elem in obj) {
+         if (String(obj[elem]) == 10 || String(obj[elem]) == 20) {
+            sum += obj[elem];
+         } else {
+            continue;
+         };
+      };
+
+      console.log(sum);
+
+   </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
