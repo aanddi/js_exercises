@@ -15,7 +15,7 @@
       let sum = 0;
 
       for (let elem in obj) {
-         if (String(obj[elem]) == 10 || String(obj[elem]) == 20) {
+         if (obj[elem] == 10 || obj[elem] == 20) {
             sum += obj[elem];
          } else {
             continue;
