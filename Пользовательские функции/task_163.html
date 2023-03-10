@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Тонкое место return в JavaScript</title>
+
+   <script>
+
+      console.log('====================== 1 ========================');
+
+      function func(num) {
+         return num; // сработает это строк, все что ниже, не сработает
+
+         let res = num ** 2;
+         return res;
+      }
+
+      console.log(func(3)); // 3
+
+      console.log('====================== 2 ========================');
+
+      function func(num) {
+         if (num <= 0) {
+            return Math.abs(num);
+         } else {
+            return num ** 2;
+         }
+      }
+
+      console.log(func(10)); // 100
+      console.log(func(-5)); // 5
+
+      console.log('====================== 3 ========================');
+
+      function func(num) {
+         if (num <= 0) {
+            return Math.abs(num); // если это условие false, то сработает второй return
+         }
+
+         return num ** 2; 
+      }
+
+      console.log(func(10)); // 100
+      console.log(func(-5)); // 5
+
+   </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
