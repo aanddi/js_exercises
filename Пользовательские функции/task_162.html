@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Последовательный вызов функций в JavaScript</title>
+
+   <script>
+
+      console.log('====================== 1 ========================');
+
+      function sqrt(num) {
+         return Math.sqrt(num);
+      }
+
+      function round(num) {
+         return num.toFixed(3);
+      };
+
+      let res1 = round(sqrt(2));
+      console.log(res1);
+
+      console.log('====================== 2 ========================');
+
+      function sqrt1(num) {
+         return Math.sqrt(num);
+      }
+
+      function sum1(num1, num2, num3) {
+         return num1 + num2 + num3;
+      };
+
+      let res2 = sum1(sqrt1(2), sqrt1(3), sqrt1(4));
+      console.log(res2);
+
+      console.log('====================== 3 ========================');
+
+      function round2(num) {
+         return num.toFixed(3);
+      }
+
+      res2 = round2(sum1(sqrt1(2), sqrt1(3), sqrt1(4)));
+      console.log(res2);
+
+   </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
