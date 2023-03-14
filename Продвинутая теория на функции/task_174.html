@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Одинаковые имена переменных в функциях в JavaScript</title>
+
+   <script>
+
+      console.log('====================== 1 ========================');
+
+      let num = 1;
+
+      function func1() {
+         num = 2;
+      }
+      func1();
+
+      console.log(num); // 2
+
+      console.log('====================== 2 ========================');
+
+      let num1 = 1;
+
+      function func() {
+         let num1 = 2;
+      }
+      func();
+
+      console.log(num1); // 1
+
+   </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
