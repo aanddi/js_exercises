@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Стрелочные функции в JavaScript</title>
+
+      <script>
+         console.log("====================== 1 ========================");
+
+         let result1 = every([1, 2, 3, 4, 5], (elem) => {
+            if (elem > 0) {
+               return true;
+            } else {
+               return false;
+            }
+         });
+
+         console.log("====================== 2 ========================");
+
+         let result2 = every([1, 2, 3, 4, 5], (elem, index) => {
+            if (elem * index > 10) {
+               return true;
+            } else {
+               return false;
+            }
+         });
+
+         console.log("====================== 3 ========================");
+
+         let arr = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9],
+         ];
+
+         let result3 = each(arr, (elem, index) => {
+            if (elem * index > 10) {
+               return true;
+            } else {
+               return false;
+            }
+         });
+         
+      </script>
+   </head>
+
+   <body></body>
+</html>
