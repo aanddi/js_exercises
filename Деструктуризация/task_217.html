@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Имена переменных при деструктуризации объектов в JavaScript</title>
+
+      <script>
+         console.log("====================== 1 ========================");
+
+         let options = {
+            color: "red",
+            width: 400,
+            height: 500,
+         };
+
+         let {color: c, width: w, height: h} = options;
+
+         console.log(c)
+         console.log(w)
+         console.log(h)
+
+      </script>
+   </head>
+
+   <body></body>
+</html>
