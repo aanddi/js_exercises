@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Разница между объектами с датой в JavaScript</title>
+
+      <script>
+         let now = new Date();
+
+         console.log("====================== 1 ========================");
+
+         let date = new Date(2000, 8, 31, 23, 59, 59);
+         let date2 = new Date(2010, 2, 14, 23, 59, 59);
+         let diff = date2 - date;
+         console.log(diff);
+
+         console.log("====================== 2 ========================");
+
+         console.log(diff / (1000 * 3600 * 24));
+
+         console.log("====================== 3 ========================");
+
+         console.log(diff / (1000 * 60 * 60 * 24 * 31));
+
+         console.log("====================== 4 ========================");
+
+         console.log(diff / (1000 * 60 * 60 * 24 * 31 * 12));
+
+      </script>
+   </head>
+
+   <body></body>
+</html>
