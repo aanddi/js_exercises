@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Получение DOM элемента в JavaScript</title>
+   </head>
+   <body>
+      <p id="elem1">1</p>
+      <p id="elem2">2</p>
+      <p id="elem3">3</p>
+
+      <div id="block">
+         <p>1</p>
+         <p>2</p>
+      </div>
+
+      <div class="block">
+         <p>1</p>
+         <p>2</p>
+      </div>
+
+      <p class="www">text</p>
+      <p class="www">text</p>
+
+      <script>
+         console.log("====================== 1 ========================");
+
+         let p1 = document.querySelector("#elem1");
+         let p2 = document.querySelector("#elem2");
+         let p3 = document.querySelector("#elem3");
+
+         console.log(p1);
+         console.log(p2);
+         console.log(p3);
+
+         console.log("====================== 2 ========================");
+
+         let pOne = document.querySelector("#block p");
+
+         console.log(pOne);
+
+         console.log("====================== 3 ========================");
+
+         let p1One = document.querySelector(".block p");
+
+         console.log(p1One);
+
+         console.log("====================== 3 ========================");
+
+         let www = document.querySelector(".www");
+
+         console.log(www);
+         
+      </script>
+   </body>
+</html>
