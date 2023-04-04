@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Фокус текстовых полей в JavaScript</title>
+   </head>
+   <style>
+     
+   </style>
+   <body>
+
+      <input id="elem" value="text" />
+
+      <script>
+
+         let elem = document.querySelector("#elem");
+         elem.addEventListener("focus", function () {
+            console.log(elem.value);
+         });
+
+      </script>
+   </body>
+</html>
