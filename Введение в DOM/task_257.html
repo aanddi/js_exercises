@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Добавление обработчиков в цикле в JavaScript</title>
+   </head>
+   <style>
+
+     .par {
+          border: 1px solid black;
+          padding: 20px 30px;
+          display: inline-block;
+          margin-left: 20px;
+     }
+
+   </style>
+   <body>
+
+      <input class="input" type="text" value="0" />
+      <input class="input" type="text" value="0" />
+      <input class="input" type="text" value="0" />
+
+      <p class="par">2</p>
+      <p class="par">3</p>
+      <p class="par">4</p>
+
+      <script>
+         console.log("====================== 1 ========================");
+
+         let inputs = document.querySelectorAll(".input");
+         
+
+         for (let input of inputs) {
+          input.addEventListener("blur", func);
+         }
+
+         function func() {
+            this.value = Number(this.value) + 1;
+         }
+
+         console.log("====================== 2 ========================");
+
+         let text = document.querySelectorAll(".par");
+
+         for (let elem of text) {
+          elem.addEventListener("click", func1);
+         }
+
+         function func1() {
+               this.textContent = Math.pow(Number(this.textContent), 2)
+         }
+
+      </script>
+   </body>
+</html>
