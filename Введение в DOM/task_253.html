@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Цепочки методов и свойств в JavaScript</title>
+   </head>
+   <style></style>
+   <body>
+
+     <img id="image" src="avatar.png">
+
+     <img id="image2" src="avatar.png" width="300" height="500">
+
+      <script>
+
+         console.log("====================== 1 ========================");
+
+         document.querySelector('#image').src = 'favicon.ico';
+
+         console.log("====================== 2 ========================");
+         
+          /*
+          console.log(document.querySelector('#image2').src);
+          console.log(document.querySelector('#image2').width);
+          console.log(document.querySelector('#image2').height);
+
+          Ошибка состоит в том, что из-за поиска 
+          айди, браузер несколько раз выполняет одно и тоже действие несколько раз
+          */
+
+          let img2 = document.querySelector('#image2');
+          img2.src = 'favicon.ico'
+          img2.height = '100'
+          img2.width = '200'
+
+      </script>
+   </body>
+</html>
