@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Другие полезные методы для поиска на JavaScript</title>
+   </head>
+   <body>
+
+     <div id="elem"></div>
+
+     <ul>
+          <li>text</li>
+          <li>text</li>
+          <li>text</li>
+          <li>text</li>
+          <li>text</li>
+     </ul>
+
+     <p class="www">elem 1</p>
+     <p class="www">elem 2</p>
+     <p class="www">elem 3</p>
+
+      <script>
+
+          console.log("====================== 1 ========================");
+
+          let elem = document.getElementById('elem');
+          elem.textContent = 'text'
+
+          console.log("====================== 2 ========================");
+
+          let elems = document.getElementsByTagName('li');
+
+          for (let elem of elems) {
+               elem.textContent += '!'
+          }
+
+          console.log("====================== 2 ========================");
+          let elems2 = document.getElementsByClassName('www');
+
+          for (let elem of elems2) {
+               elem.innerHTML = '!!!';
+          }
+          
+      </script>
+   </body>
+</html>
