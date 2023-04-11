@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Атрибут disabled в JavaScript</title>
+   </head>
+   <body>
+
+     <textarea id="elem" disabled>text</textarea>
+     <button class="btn">button</button>
+
+     <script>
+
+          let elem = document.querySelector('#elem');
+          let button = document.querySelector('.btn')
+
+          button.addEventListener('click', () => {
+               elem.disabled = !elem.disabled
+          })
+
+     </script>
+   </body>
+</html>
