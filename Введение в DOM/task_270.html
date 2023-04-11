@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Работа с узлами в JavaScript</title>
+   </head>
+   <body>
+
+     <div id="elem" data-num="1000"></div>
+
+      <script>
+          
+          let elem = document.querySelector('#elem');
+          elem.dataset.num = 123;
+
+
+          console.log(elem.childNodes[0]);
+          console.log(elem.childNodes[1]);
+          console.log(elem.childNodes[2]);
+
+
+          for (let node of elem.childNodes) {
+               console.log(node);
+          }
+
+      </script>
+   </body>
+</html>
