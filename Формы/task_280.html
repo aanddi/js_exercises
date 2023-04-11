@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Событие input в JavaScript</title>
+   </head>
+   <body>
+
+      <input id="elem" />
+      <p></p>
+
+      <script>
+
+         
+
+         let elem = document.querySelector("#elem");
+         let p = document.querySelector('p')
+
+         elem.addEventListener("input", function () {
+          p.textContent = this.value;
+         });
+
+      </script>
+   </body>
+</html>
