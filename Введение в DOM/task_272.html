@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Поиск ошибок в коде с DOM в JavaScript</title>
+   </head>
+   <body>
+
+     <ul>
+          <li>2000</li>
+          <li>2004</li>
+          <li>2021</li>
+          <li>2022</li>
+          <li>2025</li>
+          <li>2031</li>
+      </ul>
+
+      <script>
+          
+          let elems = document.querySelectorAll('li');
+          let sum = 0;
+
+          for (let elem of elems) {
+               let text = +elem.textContent;
+               
+               if (text % 6 === 0) {
+                    sum += text;
+               }
+          }
+
+          console.log(sum)
+
+      </script>
+   </body>
+</html>
