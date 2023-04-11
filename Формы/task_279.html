@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Событие change в JavaScript</title>
+   </head>
+   <body>
+     
+     <input id="elem" value="text">
+     <p></p>
+      <script>
+
+          let elem = document.querySelector('#elem');
+          let p = document.querySelector('p')
+
+          elem.addEventListener('change', function() {
+               p.textContent = this.value
+          });
+
+      </script>
+   </body>
+</html>
