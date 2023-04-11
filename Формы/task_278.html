@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Работа с радиокнопками в JavaScript</title>
+   </head>
+   <body>
+     <input type="radio" name="elem" value="1" checked>
+     <input type="radio" name="elem" value="2">
+     <input type="radio" name="elem" value="3">
+     <input type="submit" id="button">
+     <p></p>
+
+      <script>
+         let radios = document.querySelectorAll('input[type="radio"]');
+         let button = document.querySelector("#button");
+         let p = document.querySelector("p");
+
+         button.addEventListener("click", function () {
+            for (let radio of radios) {
+               if (radio.checked) {
+                  p.textContent = radio.value;
+               }
+            }
+         });
+      </script>
+   </body>
+</html>
