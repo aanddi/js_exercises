@@ -4,22 +4,20 @@
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Чередование атрибутов без значений</title>
+      <title>Основы работы с объектом Event в JavaScript</title>
    </head>
    <body>
 
-      <input id="elem" disabled />
-      <input id="button" type="submit" />
+      <button id="elem">text</button>
 
       <script>
           
          let elem = document.querySelector("#elem");
-         let button = document.querySelector("#button");
 
-         button.addEventListener("click", function () {
-            elem.disabled = !elem.disabled;
+         elem.addEventListener("click", function (event) {
+            console.log(event); 
          });
-         
+
       </script>
    </body>
 </html>
