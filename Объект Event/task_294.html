@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Отслеживание клавиш-модификаторов в JavaScript</title>
+   </head>
+   <body>
+      <a href="http://example.com">Example Link</a>
+      <a href="http://google.com">Google Link</a>
+      <a href="http://facebook.com">Facebook Link</a>
+      <br />
+      <br />
+
+      <input type="text" id="input1" />
+      <input type="text" id="input2" />
+      <p id="result"></p>
+      <a href="#" id="calculate">Calculate</a>
+
+      <script>
+         const links = document.querySelectorAll("a");
+
+         links.forEach((link) => {
+            link.addEventListener("click", (event) => {
+               event.preventDefault();
+               link.textContent += link.href;
+            });
+         });
+         //   2
+         let input1 = document.getElementById("input1");
+         let input2 = document.getElementById("input2");
+         let result = document.getElementById("result");
+         let calculateBtn = document.getElementById("calculate");
+
+         calculateBtn.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            let num1 = +input1.value;
+            let num2 = +input2.value;
+            let sum = num1 + num2;
+
+            result.textContent = sum;
+         });
+      </script>
+   </body>
+</html>
