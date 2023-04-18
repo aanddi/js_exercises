@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Номер выбранного пункта выпадающего списка</title>
+   </head>
+   <body>
+      <input type="text" id="input" />
+      <select id="select">
+         <option value="1">Пункт 1</option>
+         <option value="2">Пункт 2</option>
+         <option value="3">Пункт 3</option>
+         <option value="4">Пункт 4</option>
+         <option value="5">Пункт 5</option>
+      </select>
+      <br />
+      <br />
+
+      <select id="weekday-select">
+         <option value="1">Понедельник</option>
+         <option value="2">Вторник</option>
+         <option value="3">Среда</option>
+         <option value="4">Четверг</option>
+         <option value="5">Пятница</option>
+         <option value="6">Суббота</option>
+         <option value="0">Воскресенье</option>
+      </select>
+      <script>
+
+         window.onload = function () {
+            const input = document.getElementById("input");
+            const select = document.getElementById("select");
+
+            input.addEventListener("blur", () => {
+               const value = parseInt(input.value);
+               if (!isNaN(value)) {
+                  select.selectedIndex = value - 1;
+               }
+            });
+
+            const select1 = document.getElementById("weekday-select");
+            const today = new Date().getDay();
+            const option = select1.querySelector(`option[value="${today}"]`);
+            option.selected = true;
+         };
+
+      </script>
+   </body>
+</html>
