@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Кнопка для запуска таймера на JavaScript</title>
+   </head>
+   <body>
+      <button id="start" onclick="startCountdown()">start</button>
+      <!-- 2 -->
+      <button id="countdownBtn">Start Countdown</button>
+      <script>
+         function startCountdown() {
+            let count = 100;
+            let countdown = setInterval(function () {
+               console.log(count);
+               count--;
+               if (count === 0) {
+                  clearInterval(countdown);
+               }
+            }, 1000);
+         }
+         // 2
+         let timerId;
+         const countdownBtn = document.getElementById("countdownBtn");
+
+         function startCountdown() {
+            let counter = 100;
+            timerId = setInterval(() => {
+               console.log(counter);
+               counter--;
+               if (counter < 0) {
+                  clearInterval(timerId);
+               }
+            }, 1000);
+         }
+
+         countdownBtn.addEventListener("click", () => {
+            if (!timerId) {
+               startCountdown();
+            }
+         });
+      </script>
+   </body>
+</html>
