@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Навешивание обработчиков в цикле на JavaScript</title>
+   </head>
+   <body>
+     <div id="myDiv"></div>
+     <p id="myParagraph"></p>
+      <script>
+         window.onload = function () {
+            const myDiv = document.getElementById("myDiv");
+            const myParagraph = document.getElementById("myParagraph");
+
+            for (let i = 0; i < 5; i++) {
+               const input = document.createElement("input");
+               input.addEventListener("blur", function () {
+                  myParagraph.textContent += this.value + " ";
+               });
+               myDiv.appendChild(input);
+            }
+         };
+      </script>
+   </body>
+</html>
