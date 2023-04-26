@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Делегирование событий в JavaScript</title>
+   </head>
+   <body>
+      <ul id="elem">
+         <li>text</li>
+         <li>text</li>
+         <li>text</li>
+         <li>text</li>
+         <li>text</li>
+      </ul>
+      <br />
+      <br />
+      <!-- 2 -->
+      <ul>
+         <li>item <i>italic</i> item</li>
+         <li>item <i>italic</i> item</li>
+         <li>item <i>italic</i> item</li>
+         <li>item <i>italic</i> item</li>
+         <li>item <i>italic</i> item</li>
+      </ul>
+      <script>
+         window.onload = function () {
+            list.addEventListener("click", function (event) {
+               event.target.innerHTML = event.target.innerHTML + "!";
+            });
+            // 2
+            list.addEventListener("click", function (event) {
+               let li = event.target.closest("li");
+
+               if (li) {
+                  li.innerHTML = li.innerHTML + "!";
+               }
+            });
+         };
+      </script>
+   </body>
+</html>
