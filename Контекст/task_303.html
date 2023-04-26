@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Потеря контекста в JavaScript</title>
+   </head>
+   <body>
+      <input id="elem" value="text" />
+      <script>
+         window.onload = function () {
+            // "use strict";
+
+            let elem = document.querySelector("#elem");
+            elem.addEventListener("blur", parent);
+
+            function parent() {
+               console.log(this.value); // text
+
+               function child() {
+                  console.log(this.value); // undefined
+               }
+               child();
+            }
+         };
+      </script>
+   </body>
+</html>
