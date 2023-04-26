@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Создание и вставка элементов на JavaScript</title>
+   </head>
+   <body>
+      <ol id="elem"></ol>
+      <br />
+      <br />
+      <!-- 2 -->
+      <ol id="elem1"></ol>
+      <button id="button">click me</button>
+      <script>
+         window.onload = function () {
+            let parent = document.querySelector("#elem");
+            let li = document.createElement("li");
+            li.textContent = "item";
+            parent.appendChild(li);
+            // 2
+            const button = document.getElementById("button");
+            const list = document.getElementById("elem1");
+
+            button.addEventListener("click", () => {
+               const li = document.createElement("li");
+               li.textContent = "item";
+               list.appendChild(li);
+            });
+         };
+      </script>
+   </body>
+</html>
