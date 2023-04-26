@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Всплытие событий в JavaScript</title>
+   </head>
+   <body>
+      <div id="container">
+         <div id="first">
+            <div id="second">
+               <button id="button">Click me!</button>
+            </div>
+         </div>
+      </div>
+      <script>
+         window.onload = function () {
+            const container = document.querySelector("#container");
+            const first = document.querySelector("#first");
+            const second = document.querySelector("#second");
+            const button = document.querySelector("#button");
+
+            container.addEventListener("click", (event) => {
+               console.log(`Click on ${event.target.tagName} in container`);
+            });
+
+            first.addEventListener("click", (event) => {
+               console.log(`Click on ${event.target.tagName} in first`);
+            });
+
+            second.addEventListener("click", (event) => {
+               console.log(`Click on ${event.target.tagName} in second`);
+            });
+
+            button.addEventListener("click", (event) => {
+               console.log(`Click on ${event.target.tagName} in button`);
+            });
+            // focus
+         };
+      </script>
+   </body>
+</html>
