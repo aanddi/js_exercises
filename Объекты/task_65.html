@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Массивы как объекты в JavaScript</title>
+
+   <script>
+
+      /*______________№1______________*/
+      console.log(typeof { x: 1, y: 2, z: 3 }); // object
+
+      /*______________№2______________*/
+      console.log(typeof [1, 2, 3]); // object
+
+      /*______________№3______________*/
+      let arr = [1, 2, 3];
+      console.log(typeof arr); // object
+
+      /*______________№4______________*/
+      let arr1 = [1, 2, 3];
+      console.log(typeof arr1[0]); // number
+
+      /*______________№5______________*/
+      let arr3 = ['1', '2', '3'];
+      console.log(typeof arr3[0]); // string
+
+   </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

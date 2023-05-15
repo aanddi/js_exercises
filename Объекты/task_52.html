@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Ограничения на ключи объектов в JavaScript</title>
+
+   <script>
+
+      /*______________№1______________*/
+      let obj = {
+         '1a': 1,     // нужны кавычки
+         'b2': 2,    // можно без кавычек
+         'с-с': 3,  // нужны кавычки
+         'd 4': 4, // нужны кавычки
+         'e5': 5  // можно без кавычек
+      }
+
+      /*______________№2______________*/
+      let obj2 = {
+         '1a': 1,
+         'b2': 2,
+         'с-с': 3,
+         'd 4': 4,
+         'e5': 5
+      };
+
+      console.log(obj2['1a']);
+      console.log(obj2.b2);
+      console.log(obj2['с-с']);
+      console.log(obj2['d 4']);
+      console.log(obj2.e5);
+
+   </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

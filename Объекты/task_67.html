@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Объекты и примитивы в JavaScript</title>
+
+   <script>
+
+      /*______________№1______________*/
+      let test1 = { x: 1, y: 2, z: 3 };
+      console.log(test1); // object. Не примитивный
+
+      /*______________№2______________*/
+      let test2 = { x: 1, y: 2, z: 3 };
+      console.log(test2.x); // number. Примитивный
+      /*______________№3______________*/
+      let test3 = [1, 2, 3];
+      console.log(test3); // object. Не примитивный
+
+      /*______________№4______________*/
+      let test4 = [1, 2, 3];
+      console.log(test4[1]); // number. Примитивный
+
+      /*______________№5______________*/
+      let test5 = [1, 2, 3];
+      let test6 = 1;
+
+      console.log(test5); // object. Не примитивный
+
+      /*______________№6______________*/
+      let test7 = [1, 2, 3];
+      let test8 = 1;
+
+      console.log(test7[test8]); // number. Примитивный
+
+      /*______________№7______________*/
+
+      /* 
+
+      string
+      number
+      boolean
+      undefined
+      bigint
+      null
+      symbol
+
+      */
+
+   </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
