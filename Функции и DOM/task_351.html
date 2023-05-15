@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Передача порядкового номера в коллбэк</title>
+   </head>
+   <body>
+      <p class="elem">1</p>
+      <p class="elem">2</p>
+      <p class="elem">3</p>
+      <p class="elem">4</p>
+      <p class="elem">5</p>
+      <script>
+         window.onload = function () {
+            let paragraphs = document.querySelectorAll("p");
+
+            paragraphs.forEach(function (paragraph, index) {
+               let paragraphNumber = index + 1;
+               paragraph.textContent =
+                  paragraphNumber + ". " + paragraph.textContent;
+            });
+         };
+      </script>
+   </body>
+</html>
