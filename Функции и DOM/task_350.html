@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Передача коллбэка для работы с DOM</title>
+   </head>
+   <body>
+      <p class="elem">1</p>
+      <p class="elem">2</p>
+      <p class="elem">3</p>
+      <p class="elem">4</p>
+      <p class="elem">5</p>
+      <script>
+         window.onload = function () {
+            function forEach(collection, callback) {
+               for (let i = 0; i < collection.length; i++) {
+                  callback(collection[i]);
+               }
+            }
+
+            let paragraphs = document.querySelectorAll("p");
+
+            forEach(paragraphs, function (paragraph) {
+               paragraph.textContent += "!";
+            });
+         };
+      </script>
+   </body>
+</html>
