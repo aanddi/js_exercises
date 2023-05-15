@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Одновременное редактирование и удаление элементов</title>
+   </head>
+   <body>
+      <div id="parent">
+         <p><span>text1</span></p>
+         <p><span>text2</span></p>
+         <p><span>text3</span></p>
+      </div>
+
+      <script>
+         window.onload = function () {
+            let paragraphs = document.querySelectorAll("#parent p");
+
+            for (let i = 0; i < paragraphs.length; i++) {
+               let deleteLink = document.createElement("a");
+               deleteLink.href = "#";
+               deleteLink.textContent = "delete";
+
+               deleteLink.addEventListener("click", function (e) {
+                  e.preventDefault();
+                  this.parentNode.parentNode.removeChild(this.parentNode);
+               });
+
+               paragraphs[i].appendChild(deleteLink);
+            }
+            let spans = document.querySelectorAll("#parent span");
+
+            for (let i = 0; i < spans.length; i++) {
+               spans[i].addEventListener("click", function () {
+                  let input = document.createElement("input");
+                  input.type = "text";
+                  input.value = this.textContent;
+
+                  input.addEventListener("blur", function () {
+                     this.parentNode.removeChild(this);
+                     let span = document.createElement("span");
+                     span.textContent = this.value;
+                     this.parentNode.insertBefore(span, this);
+                  });
+
+                  this.parentNode.insertBefore(input, this);
+               });
+            }
+         };
+      </script>
+   </body>
+</html>
