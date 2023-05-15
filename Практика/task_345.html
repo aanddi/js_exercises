@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Активация элементов на JavaScript</title>
+   </head>
+   <style>
+      .active {
+         background-color: red;
+      }
+   </style>
+   <body>
+      <ul id="list">
+         <li>Item 1</li>
+         <li>Item 2</li>
+         <li>Item 3</li>
+         <li>Item 4</li>
+      </ul>
+
+      <script>
+         window.onload = function () {
+            let list = document.querySelector("#list");
+            let items = list.getElementsByTagName("li");
+
+            for (let i = 0; i < items.length; i++) {
+               items[i].addEventListener("click", function () {
+                  for (let j = 0; j < items.length; j++) {
+                     items[j].classList.remove("active");
+                  }
+                  this.classList.add("active");
+               });
+            }
+         };
+      </script>
+   </body>
+</html>
