@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Стилизация элементов на JavaScript</title>
+   </head>
+   <body>
+      <p>text1</p>
+      <p>text2</p>
+      <p>text3</p>
+      <br />
+      <br />
+      <!-- 2 -->
+      <table id="myTable">
+         <tr>
+            <td>Ячейка 1</td>
+            <td>Ячейка 2</td>
+            <td><a href="#">Ссылка</a></td>
+         </tr>
+         <tr>
+            <td>Ячейка 3</td>
+            <td>Ячейка 4</td>
+            <td><a href="#">Ссылка</a></td>
+         </tr>
+         <tr>
+            <td>Ячейка 5</td>
+            <td>Ячейка 6</td>
+            <td><a href="#">Ссылка</a></td>
+         </tr>
+      </table>
+
+      <script>
+         window.onload = function () {
+            let pTags = document.getElementsByTagName("p");
+            for (let i = 0; i < pTags.length; i++) {
+               let link = document.createElement("a");
+               link.href = "#";
+               link.innerHTML = "Перечеркнуть";
+               link.addEventListener("click", function () {
+                  pTags[i].style.textDecoration = "line-through";
+                  this.style.textDecoration = "none";
+               });
+               pTags[i].appendChild(link);
+            }
+            // 2
+            const table = document.getElementById("myTable");
+
+            table.addEventListener("click", function (event) {
+               const target = event.target;
+               if (target.tagName === "A") {
+                  const row = target.parentNode.parentNode;
+                  row.classList.add("green-bg");
+               }
+            });
+         };
+      </script>
+   </body>
+</html>
