@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>
+          Библиотеки через замыкания в JavaScript
+      </title>
+   </head>
+   <body>
+      <script>
+         let sum = (arr, pow) => {
+            let res = 0;
+            for (let elem of arr) {
+               res += elem ** pow;
+            }
+            return res;
+         };
+
+         let avg1 = (arr) => {
+            return sum(arr, 1) / arr.length;
+         };
+
+         let avg2 = (arr) => {
+            return sum(arr, 2) / arr.length;
+         };
+
+         let avg3 = (arr) => {
+            return sum(arr, 3) / arr.length;
+         };
+
+         export { avg1, avg2, avg3 };
+      </script>
+   </body>
+</html>
