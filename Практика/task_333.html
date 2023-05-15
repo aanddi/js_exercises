@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Добавление рядов и колонок в HTML таблицу</title>
+   </head>
+   <body>
+      <table id="myTable">
+         <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+         </tr>
+      </table>
+      <button id="addRowBtn">Добавить ряд</button>
+      <br />
+      <br />
+      <!-- 2 -->
+      <table id="table">
+         <tr>
+            <td></td>
+            <td></td>
+         </tr>
+         <tr>
+            <td></td>
+            <td></td>
+         </tr>
+      </table>
+      <button id="addBtn">Добавить ячейку</button>
+      <script>
+         window.onload = function () {
+            let addRowBtn = document.getElementById("addRowBtn");
+            let table = document.getElementById("myTable");
+
+            addRowBtn.addEventListener("click", function () {
+               let newRow = table.insertRow();
+               for (let i = 0; i < 5; i++) {
+                  let cell = newRow.insertCell();
+                  cell.innerHTML = "";
+               }
+            });
+            // 2
+            let addBtn = document.getElementById("addBtn");
+            let table1 = document.getElementById("table");
+
+            addBtn.addEventListener("click", function () {
+               // находим количество строк и колонок в таблице
+               let rowCount = table1.rows.length;
+               let colCount = table1.rows[0].cells.length;
+
+               // добавляем новую ячейку в каждую строку
+               for (let i = 0; i < rowCount; i++) {
+                  let cell = table1.rows[i].insertCell(colCount);
+                  cell.style.width = "50px";
+                  cell.style.height = "50px";
+                  cell.style.border = "1px solid black";
+               }
+
+               // добавляем новую строку
+               let newRow = table1.insertRow(rowCount);
+               for (let i = 0; i < colCount + 1; i++) {
+                  let cell = newRow.insertCell();
+                  cell.style.width = "50px";
+                  cell.style.height = "50px";
+                  cell.style.border = "1px solid black";
+               }
+            });
+         };
+      </script>
+   </body>
+</html>
