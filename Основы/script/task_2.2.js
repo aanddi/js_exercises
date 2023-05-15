@@ -1,1 +1,0 @@
-alert("Script_2");

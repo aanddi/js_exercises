@@ -5,19 +5,17 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Последний символ строки в JavaScript</title>
+   <title>Разреженные массивы в JavaScript</title>
 
    <script>
 
       /*______________№1______________*/
-      let str = 'Andrey';
-      alert(str[str.length - 1]);
+      let arr = [];
 
-      /*______________№2______________*/
-      alert(str[str.length - 2]);
+      arr[3] = 'a';
+      arr[8] = 'b';
 
-      /*______________№3______________*/
-      alert(str[str.length - 3]);
+      console.log(arr.length);
 
    </script>
 

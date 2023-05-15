@@ -5,19 +5,23 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Отрицательные числа в JavaScript</title>
+   <title>Ключи массивов из переменных в JavaScript</title>
 
    <script>
+
       /*______________№1______________*/
-      let a = -100;
-      alert(a);
+      let arr = ['a', 'b', 'c'];
+      let key = 2;
+
+      console.log(arr[key]); // c
 
       /*______________№2______________*/
-      let b = -50;
-      alert(-b);
-      
-      let c = 10;
-      alert(-c);
+      let arr2 = [1, 2, 3, 4, 5];
+      let key1 = 1;
+      let key2 = 2;
+
+      console.log(arr2[key1] + arr2[key2]); // 2 + 3
+
 
    </script>
 

@@ -5,29 +5,27 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Переменные в JavaScript</title>
+   <title>Добавление элементов через push в JavaScript</title>
 
    <script>
+
       /*______________№1______________*/
-      let num = 123;
-      alert(num);
+      let array = new Array();
+
+      array.push(1);
+      array.push(2);
+      array.push(3);
+
+      console.log(array);
 
       /*______________№2______________*/
-      let x = 1, y = 2, z = 3;
+      let array2 = [1, 2, 3];
 
-      let u = 12;
-      let p = 33;
+      array2.push(4);
+      array2.push(5);
 
-      let q, w, e;
-      q = 5;
-      w = 7;
-      e = 9;
+      console.log(array2);
 
-      /*______________№3______________*/
-      let a = 10;
-      alert(a);
-      a = 20;
-      alert(a);
 
    </script>
 
@@ -36,4 +34,5 @@
 <body>
 
 </body>
+
 </html>
