@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Функции для работы с DOM элементом</title>
+   </head>
+   <body>
+      <button id="myButton">button</button>
+      <script>
+         window.onload = function () {
+            function setAttr(selector, attrName, attrValue) {
+               const elem = document.querySelector(selector);
+               elem.setAttribute(attrName, attrValue);
+            }
+            setAttr("#myButton", "disabled", true);
+         };
+      </script>
+   </body>
+</html>
