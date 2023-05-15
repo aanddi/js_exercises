@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Самоудаление новых элементов на JavaScript</title>
+   </head>
+   <body>
+      <ul id="parent">
+         <li>1</li>
+         <li>2</li>
+         <li>3</li>
+      </ul>
+
+      <input type="submit" id="button" />
+      <script>
+         window.onload = function () {
+            let parent = document.getElementById("parent");
+            let button = document.getElementById("button");
+
+            button.addEventListener("click", function () {
+               let li = document.createElement("li");
+               li.innerHTML = parent.children.length + 1;
+               parent.appendChild(li);
+
+               li.addEventListener("click", function () {
+                  parent.removeChild(this);
+               });
+            });
+
+            for (let i = 0; i < parent.children.length; i++) {
+               parent.children[i].addEventListener("click", function () {
+                  parent.removeChild(this);
+               });
+            }
+         };
+      </script>
+   </body>
+</html>
