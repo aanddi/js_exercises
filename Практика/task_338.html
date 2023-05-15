@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Редактирование отдельного элемента на JavaScript</title>
+   </head>
+   <body>
+      <div id="parent">
+         <p id="elem">text</p>
+         <input id="input" />
+      </div>
+      <br />
+      <br />
+      <!-- 2 -->
+      <div id="parent1">
+         <p id="elem1">text</p>
+      </div>
+
+      <script>
+         window.onload = function () {
+            let elem = document.querySelector("#elem");
+            let input = document.querySelector("#input");
+
+            input.value = elem.textContent;
+
+            input.addEventListener("input", function () {
+               elem.textContent = this.value;
+            });
+            // 2
+            let elem2 = document.querySelector("#elem1");
+
+            elem2.addEventListener("click", function () {
+               let input = document.createElement("input");
+               input.value = elem2.textContent;
+
+               input.addEventListener("blur", function () {
+                  elem2.textContent = this.value;
+                  this.remove(); // удалим инпут
+               });
+
+               elem2.parentElement.appendChild(input);
+            });
+         };
+      </script>
+   </body>
+</html>
