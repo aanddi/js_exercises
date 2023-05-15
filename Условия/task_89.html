@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Сокращенная форма проверки на ложь в JavaScript</title>
+</head>
+
+<script>
+
+   /*______________№1______________*/
+   let test = true;
+
+   if (!test) {
+      console.log('+++'); 
+   } else {
+      console.log('---'); // сработает это
+   }
+
+   /*______________№2______________*/
+   let test2 = true;
+
+   if (!test2) {
+      console.log('+++');
+   } else {
+      console.log('---'); // сработает это
+   }
+
+   /*______________№3______________*/
+   let test3 = true;
+
+   if (test3) {
+      console.log('+++'); // сработает это
+   } else {
+      console.log('---');
+   }
+
+</script>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Нюансы области видимости переменных в конструкциях if-else в JavaScript</title>
+</head>
+
+<script>
+
+   /*______________№1______________*/
+   let age = 17;
+   let adult;
+
+   if (age >= 18) {
+      adult = true;
+   } else {
+      adult = false;
+   }
+
+   console.log(adult);
+
+   /*______________№2______________*/
+   let age1 = 17;
+   let adult1;
+
+   if (age >= 18) {
+      adult1 = true;
+   } else {
+      adult1 = false;
+   }
+
+   console.log(adult);
+
+   /*______________№3______________*/
+   let age2 = 17;
+   let res;
+
+   if (age2 >= 18) {
+      if (age2 <= 23) {
+         res = 'от 18 до 23';
+      } else {
+         res = 'больше 23';
+      }
+   } else {
+      res = 'меньше 18';
+   }
+
+   console.log(res);
+
+   /*______________№4______________*/
+   let age3 = 19;
+   let res1;
+
+   if (age3 >= 18) {
+      if (age3 <= 23) {
+         res1 = 'от 18 до 23';
+      } else {
+         res1 = 'больше 23';
+      }
+   } else {
+      res1 = 'меньше 18';
+   }
+
+   console.log(res1);
+
+</script>
+
+<body>
+
+</body>
+
+</html>
